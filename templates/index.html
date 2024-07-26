@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Art Prompt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Daily Art Prompt</h1>
+        <form id="categoryForm" method="get" action="/">
+            <label for="category">Categories:</label>
+            <select name="category" id="category" onchange="this.form.submit()">
+                <option value="">All</option>
+                <option value="animals" {% if selected_category == 'animals' %}selected{% endif %}>Animals</option>
+                <option value="still life" {% if selected_category == 'still life' %}selected{% endif %}>Still Life</option>
+                <option value="nature" {% if selected_category == 'nature' %}selected{% endif %}>Nature</option>
+                <option value="building" {% if selected_category == 'building' %}selected{% endif %}>Buildings</option>
+                <option value="fantasy" {% if selected_category == 'fantasy' %}selected{% endif %}>Fantasy</option>
+                <option value="people" {% if selected_category == 'people' %}selected{% endif %}>People</option>
+            </select>
+        </form>
+        <p>{{ prompt }}</p>
+        <button onclick="refreshPage()">Get New Prompt</button>
+
+    </div>
+    <script>
+        function refreshPage() {
+            let form = document.getElementById('categoryForm');
+            form.submit();
+        }
+    </script>
+</body>
+</html>
