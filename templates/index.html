@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,5 +37,56 @@
             form.submit();
         }
     </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Prompts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <!-- <button class="main-action">Main Action</button> -->
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/artprompts.jpg') }}" alt="Art Prompts">
+            </div>
+            <h1>Unleash Your Creativity with Art Prompts</h1>
+            <p>Get inspired and kickstart your artistic journey with our diverse range of drawing prompts. Choose multiple prompts to challenge yourself and explore new ideas.</p>
+            <div class="buttons">
+                <button class="generate-prompt" onclick="window.location.reload();">Generate Prompt</button>
+                <!-- <button class="learn-more">Learn More</button> -->
+            </div>
+            <p>{{prompt}}</p>
+        </section>
+
+        <!-- <section class="gallery">
+            <img src="image1.jpg" alt="Work Harder">
+            <img src="image2.jpg" alt="Vintage Drawing">
+            <img src="image3.jpg" alt="Christmas Tree Decoration">
+            <img src="image4.jpg" alt="Digital Drawing">
+            <img src="image5.jpg" alt="Christmas Decoration">
+            <img src="image6.jpg" alt="Colorful Chalks">
+        </section> -->
+        <!-- <section class="gallery">
+            <img src="{{ url_for('static', filename='images/turtle.jpg') }}" alt="animals">
+        </section> -->
+    </main>
 </body>
 </html>

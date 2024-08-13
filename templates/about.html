@@ -3,28 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Daily Art Prompt</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>About Daily Art Prompt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
+
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+            <!-- <button class="main-action">Main Action</button> -->
         </nav>
     </header>
-    <div class="container">
-        <h1>About Daily Art Prompt</h1>
-        <p>Welcome to the Daily Art Prompt website! Here, we provide daily prompts to inspire your artistic creativity and help you build a habit of drawing every day.</p>
-        <p>Creating art every day has numerous benefits, including:</p>
-        <ul>
-            <li>Enhancing your creativity and imagination</li>
-            <li>Improving your drawing skills through consistent practice</li>
-            <li>Providing a productive outlet for stress relief</li>
-            <li>Helping you explore new techniques and ideas</li>
-            <li>Building discipline and a daily routine</li>
-        </ul>
-        <p>We hope these prompts spark your creativity and bring joy to your daily routine. Happy drawing!</p>
-    </div>
+
+    <main>
+        <section class="hero container about">
+            <h1>About Art Prompts</h1>
+            <p>Welcome to Daily Art Prompts! Here, we provide art prompts to inspire your artistic creativity and help you build a habit of drawing every day.</p>
+            <p>Creating art every day has numerous benefits, including:</p>
+                <p>
+                <li>Enhancing your creativity and imagination</li>
+                <li>Improving your drawing skills through consistent practice</li>
+                <li>Providing a productive outlet for stress relief</li>
+                <li>Helping you explore new techniques and ideas</li>
+                <li>Building discipline and a daily routine</li>
+                </p>
+            <p>We hope these prompts spark your creativity and bring joy to your daily routine. Happy drawing!</p>
+        </section>
+    </main>
 </body>
 </html>
