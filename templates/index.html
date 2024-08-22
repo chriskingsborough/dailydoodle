@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Art Prompts">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Art Prompts</title>
+    <title>Art Prompt Ideas</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
 
@@ -18,8 +18,7 @@
     
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='cover.css')}}">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/cover.css')}}">
   </head>
   <body class="d-flex h-100 text-center text-bg-dark">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -39,16 +38,7 @@
     </svg>
     
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Art Prompts</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="/">Home</a>
-        <a class="nav-link fw-bold py-1 px-0" href="/about">About</a>
-        <!-- <a class="nav-link fw-bold py-1 px-0" href="/contact">Contact</a> -->
-      </nav>
-    </div>
-  </header>
+    {% include 'layouts/navbar.html' %}
 
   <main class="px-3">
     <div class="logo">
@@ -61,10 +51,21 @@
       <a href="/" onclick="window.location.reload();" class="btn btn-lg btn-light fw-bold border-white bg-white">Generate Prompt</a>
     </p>
     <p class="lead">{{prompt}}</p>
+    <br>
+    <h3>Subscribe for more Art Prompts</h3>
+    <p class="lead">
+      Sign up to receive exclusive art prompts, prompt challenges and even occassional art supply discounts.
+    </p>
+    <form action="{{ url_for('subscribe') }}" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit">Subscribe</button>
+    </form>
   </main>
 
   <footer class="mt-auto text-white-50">
     <!-- <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p> -->
+    <p>Art Prompt Ideas</p>
   </footer>
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>

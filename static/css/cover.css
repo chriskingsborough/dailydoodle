@@ -131,3 +131,29 @@ body {
   height: 200px;
   /* Adjust height according to your logo's aspect ratio */
 }
+
+/* .h-100 {
+  height: max-content !important;
+} */
+/* .h-100 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
+.h-100 {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important; /* Ensure it fills at least the viewport height */
+  height: auto !important;
+}
+
+.px-3 {
+  flex:1;
+}

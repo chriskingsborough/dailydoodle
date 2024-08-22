@@ -1,0 +1,17 @@
+Table prompt {
+    id int [pk, increment, not null]
+    text varchar(250) [not null]
+    category varchar(250) [null]
+
+    Note: "The table stores text prompts along with optional categories."
+}
+
+
+Table subscriber {
+    id int [pk, increment, not null]
+    email varchar(250) [not null]
+    joined date
+    active boolean [default True]
+
+    Note: "Store subscriber information"
+}
