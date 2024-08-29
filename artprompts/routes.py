@@ -87,3 +87,7 @@ def home():
         selected_category=category,
         active_page='home'
     )
+
+@app.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('static', filename='images/favicon.ico'))

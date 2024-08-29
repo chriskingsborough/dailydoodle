@@ -2,6 +2,7 @@
 <html lang="en" class="h-100" data-bs-theme="auto">
 
   <head><script src="../assets/js/color-modes.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,9 +45,9 @@
     <div class="logo">
         <img src="{{ url_for('static', filename='images/artprompts.jpg') }}" alt="Art Prompts">
     </div>
-    <h1>Art Prompts</h1>
+    <h1>Art Prompt Ideas</h1>
     <p class="lead">Unleash Your Creativity with Art Prompts</p>
-    <p class="lead">Get inspired and kickstart your artistic journey with our diverse range of drawing prompts. Choose multiple prompts to challenge yourself and explore new ideas.</p>
+    <p class="lead">Get inspired and kickstart your artistic journey with our diverse range of art and drawing prompts. Choose multiple prompts to challenge yourself and explore new ideas.</p>
     <p class="lead">
       <a href="/" onclick="window.location.reload();" class="btn btn-lg btn-light fw-bold border-white bg-white">Generate Prompt</a>
     </p>
@@ -54,7 +55,7 @@
     <br>
     <h3>Subscribe for more Art Prompts</h3>
     <p class="lead">
-      Sign up to receive exclusive art prompts, prompt challenges and even occassional art supply discounts.
+      Sign up to receive exclusive art and drawing prompts, challenges and art supply suggestions.
     </p>
     <form action="{{ url_for('subscribe') }}" method="post">
         <label for="email">Email:</label>
